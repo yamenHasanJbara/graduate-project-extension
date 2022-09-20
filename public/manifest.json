@@ -1,0 +1,18 @@
+{
+    "name": "first extension",
+    "version": "1.0",
+    "description": "extension for track user",
+    "permissions": ["http://127.0.0.1:8000/*", "storage"],
+    "page_action": {},
+    "background": {
+        "scripts": ["/extension/background.js"]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["https://*.atlassian.net/*"],
+            "js": ["/extension/content.js"]
+        }
+    ],
+    "manifest_version": 2
+}
